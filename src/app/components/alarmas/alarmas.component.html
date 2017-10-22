@@ -4,7 +4,7 @@
 <div class="card-columns animated fadeIn">
     <div class="card" *ngFor="let alarma of (alarmas | async)?.reverse()">
         <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
-        <agm-map [latitude]="alarma.lat" [longitude]="alarma.lon" [zoom]="17" [scrollwheel]="false" [mapDraggable]="false">
+        <agm-map [latitude]="alarma.lat" [longitude]="alarma.lon" [zoom]="16" [scrollwheel]="false" [mapDraggable]="false">
             <agm-marker [latitude]="alarma.lat" [longitude]="alarma.lon"></agm-marker>
           </agm-map>
         <div class="card-body">
