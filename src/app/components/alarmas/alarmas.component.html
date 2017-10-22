@@ -1,0 +1,16 @@
+<h1 class="animated fadeIn fast">Alarmas <small>Cunco</small></h1>
+<hr>
+
+<div class="card-columns animated fadeIn">
+    <div class="card" *ngFor="let alarma of (alarmas | async)?.reverse()">
+        <!-- <img class="card-img-top" src="" alt="Card image cap"> -->
+        <agm-map [latitude]="alarma.lat" [longitude]="alarma.lon" [zoom]="17" [scrollwheel]="false" [mapDraggable]="false">
+            <agm-marker [latitude]="alarma.lat" [longitude]="alarma.lon"></agm-marker>
+          </agm-map>
+        <div class="card-body">
+          <h4 class="card-title">{{alarma.tipo}}</h4>
+          <p class="card-text">{{alarma.descripcion}}</p>
+          <p class="card-text"><small class="text-muted">{{mostrar_fecha(alarma.tiempo)}}</small></p>
+        </div>
+      </div>
+</div>
