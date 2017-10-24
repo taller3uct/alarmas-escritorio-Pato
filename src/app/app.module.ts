@@ -18,6 +18,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 
 // mapa
 import { AgmCoreModule } from '@agm/core';
+import { BuscadorComponent } from './buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AgmCoreModule } from '@agm/core';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    AlarmasComponent
+    AlarmasComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
